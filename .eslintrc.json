@@ -12,6 +12,14 @@
     "sourceType": "module"
   },
   "plugins": ["react"],
+  "overrides": [
+    {
+      "files": ["*.test.jsx"],
+      "rules": {
+        "no-undef": "off"
+      }
+    }
+  ],
   "rules": {
     "no-prototype-builtins": "off",
     "linebreak-style": "off",
