@@ -1,0 +1,78 @@
+# how to setup https://zellwk.com/blog/github-actions-deploy/
+# 1. Generate keygen in server
+#    ssh-keygen -f ~/.ssh/github_actions/id_rsa_your_repo -t rsa -b 4096 -C "your_email@example.com"
+#
+# 2. Add public key to authorized_keys
+#    cat id_rsa_your_repo.pub >> .ssh/authorized_keys
+#
+# 3. copy your Private Key and paste it into Github Secrets.
+#    cat github_actions/id_rsa_your_repo >> Github Secrets -> ssh_private_key
+
+name: 'Deploy React App Workflow'
+on:
+  workflow_call:
+    inputs:
+      environment:
+        required: true
+        type: string
+      branch:
+        required: true
+        type: string
+    secrets:
+      app_env:
+        required: true
+      ssh_private_key:
+        required: true
+      ssh_host:
+        required: true
+      ssh_user:
+        required: true
+
+jobs:
+  deploy-react:
+    runs-on: ubuntu-latest
+    steps:
+      # to get the ref branch
+      # take note that this is different from inputs.branch when executed from workflows with workflow_run
+      # - name: Get the current branch name
+      #   shell: bash
+      #   run: echo "::set-output name=branch::${GITHUB_REF#refs/heads/}"
+      #   id: extract_branch
+
+      - name: Checkout ${{ inputs.branch }} branch
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ inputs.branch }}
+
+      - uses: pnpm/action-setup@v2.0.1
+        with:
+          version: 7.0.0-rc.3
+
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 16.13.0
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Set node environment variables
+        run: echo ${{ secrets.app_env }} | base64 --decode --ignore-garbage > .env
+
+      - name: Build React App
+        run: pnpm build
+
+      - name: Deployment script below
+        run: echo "add your script here to deploy ${{ inputs.branch }} branch"
+
+      # - name: Install SSH Key
+      #   uses: shimataro/ssh-key-action@v2
+      #   with:
+      #     key: ${{ secrets.ssh_private_key }}
+      #     known_hosts: 'just-a-placeholder-so-we-dont-get-errors'
+
+      # - name: Adding Known Hosts
+      #   run: ssh-keyscan -H ${{ secrets.ssh_host }} >> ~/.ssh/known_hosts
+
+      # - name: Deploy app with rsync to ${{ inputs.environment }}
+      #   run: rsync -avz --delete ./build/ ${{ secrets.ssh_user }}@${{ secrets.ssh_host }}:/home/ubuntu/apps/boilerplate-react-ts-cra/build/
