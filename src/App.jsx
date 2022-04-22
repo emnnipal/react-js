@@ -1,9 +1,17 @@
 import './App.scss';
-import { useState } from 'react';
 import { ReactComponent as ReactLogo } from './logo.svg';
+import useBearStore from './shared/store/Bears';
 
-function App() {
+import { useState } from 'react';
+
+const App = () => {
   const [count, setCount] = useState(0);
+  const bearsCount = useBearStore((state) => state.bearsCount);
+  const increasePopulation = useBearStore((state) => state.increasePopulation);
+
+  const handleIncrement = () => {
+    setCount((prevCount) => prevCount + 1);
+  };
 
   return (
     <div className="App">
@@ -11,12 +19,17 @@ function App() {
         <ReactLogo className="App-logo" />
         <p>Hello Vite + React!</p>
         <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
+          <button type="button" onClick={handleIncrement}>
             count is: {count}
           </button>
         </p>
         <p>
-          Edit <code>App.jsx</code> and save to test HMR updates.
+          <button type="button" onClick={increasePopulation}>
+            Bear count is: {bearsCount}
+          </button>
+        </p>
+        <p>
+          Edit <code>App.tsx</code> and save to test HMR updates.
         </p>
         <p>
           <a
@@ -40,6 +53,6 @@ function App() {
       </header>
     </div>
   );
-}
+};
 
 export default App;
