@@ -8,6 +8,7 @@ const App = () => {
   const [count, setCount] = useState(0);
   const bearsCount = useBearStore((state) => state.bearsCount);
   const increasePopulation = useBearStore((state) => state.increasePopulation);
+  const removeAllBears = useBearStore((state) => state.removeAllBears);
 
   const handleIncrement = () => {
     setCount((prevCount) => prevCount + 1);
@@ -25,9 +26,13 @@ const App = () => {
         </p>
         <p>
           <button type="button" onClick={increasePopulation}>
-            Bear count is: {bearsCount}
+            Bear population is: {bearsCount}
           </button>
         </p>
+        <button type="button" onClick={removeAllBears}>
+          Kill all bears
+        </button>
+
         <p>
           Edit <code>App.tsx</code> and save to test HMR updates.
         </p>
