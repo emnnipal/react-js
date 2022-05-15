@@ -1,4 +1,4 @@
-lockfileVersion: 5.3
+lockfileVersion: 5.4
 
 specifiers:
   '@babel/core': ^7.17.9
@@ -39,11 +39,11 @@ specifiers:
 
 dependencies:
   '@testing-library/jest-dom': 5.16.4
-  '@testing-library/react': 13.1.1_react-dom@18.0.0+react@18.0.0
+  '@testing-library/react': 13.1.1_zpnidt7m3osuk7shl3s4oenomq
   immer: 9.0.12
   react: 18.0.0
   react-dom: 18.0.0_react@18.0.0
-  react-router-dom: 6.3.0_react-dom@18.0.0+react@18.0.0
+  react-router-dom: 6.3.0_zpnidt7m3osuk7shl3s4oenomq
   use-immer: 0.7.0_immer@9.0.12+react@18.0.0
   zustand: 4.0.0-rc.0_immer@9.0.12+react@18.0.0
 
@@ -60,7 +60,7 @@ devDependencies:
   cross-env: 7.0.3
   dotenv: 16.0.0
   eslint: 8.13.0
-  eslint-config-airbnb: 19.0.4_98153b3cb1eb5f851029189077e45ffc
+  eslint-config-airbnb: 19.0.4_taktwpfr5npykebjdcihpzc77q
   eslint-config-prettier: 8.5.0_eslint@8.13.0
   eslint-plugin-import: 2.26.0_eslint@8.13.0
   eslint-plugin-jsx-a11y: 6.5.1_eslint@8.13.0
@@ -1777,7 +1777,7 @@ packages:
       '@types/node': 17.0.25
       chalk: 4.1.2
       cosmiconfig: 7.0.1
-      cosmiconfig-typescript-loader: 1.0.9_de7c86b0cde507c63a0402da5b982bd3
+      cosmiconfig-typescript-loader: 1.0.9_3z6inmgn4ud4moqealnfxgbl2m
       lodash: 4.17.21
       resolve-from: 5.0.0
       typescript: 4.6.3
@@ -2429,7 +2429,7 @@ packages:
       redent: 3.0.0
     dev: false
 
-  /@testing-library/react/13.1.1_react-dom@18.0.0+react@18.0.0:
+  /@testing-library/react/13.1.1_zpnidt7m3osuk7shl3s4oenomq:
     resolution:
       {
         integrity: sha512-8mirlAa0OKaUvnqnZF6MdAh2tReYA2KtWVw1PKvaF5EcCZqgK5pl8iF+3uW90JdG5Ua2c2c2E2wtLdaug3dsVg==,
@@ -3543,7 +3543,7 @@ packages:
     requiresBuild: true
     dev: true
 
-  /cosmiconfig-typescript-loader/1.0.9_de7c86b0cde507c63a0402da5b982bd3:
+  /cosmiconfig-typescript-loader/1.0.9_3z6inmgn4ud4moqealnfxgbl2m:
     resolution:
       {
         integrity: sha512-tRuMRhxN4m1Y8hP9SNYfz7jRwt8lZdWxdjg/ohg5esKmsndJIn4yT96oJVcf5x0eA11taXl+sIp+ielu529k6g==,
@@ -3555,7 +3555,7 @@ packages:
     dependencies:
       '@types/node': 17.0.25
       cosmiconfig: 7.0.1
-      ts-node: 10.7.0_de7c86b0cde507c63a0402da5b982bd3
+      ts-node: 10.7.0_3z6inmgn4ud4moqealnfxgbl2m
       typescript: 4.6.3
     transitivePeerDependencies:
       - '@swc/core'
@@ -4283,7 +4283,7 @@ packages:
       source-map: 0.6.1
     dev: true
 
-  /eslint-config-airbnb-base/15.0.0_25dbcfb8cfecb7418ebda712664abe37:
+  /eslint-config-airbnb-base/15.0.0_exn47ogp5s3uddv5u4jgmsv6g4:
     resolution:
       {
         integrity: sha512-xaX3z4ZZIcFLvh2oUNvcX5oEofXda7giYmuplVxoOg5A7EXJMrUyqRgR+mhDhPK8LZ4PttFOBvCYDbX3sUoUig==,
@@ -4301,7 +4301,7 @@ packages:
       semver: 6.3.0
     dev: true
 
-  /eslint-config-airbnb/19.0.4_98153b3cb1eb5f851029189077e45ffc:
+  /eslint-config-airbnb/19.0.4_taktwpfr5npykebjdcihpzc77q:
     resolution:
       {
         integrity: sha512-T75QYQVQX57jiNgpF9r1KegMICE94VYwoFQyMGhrvc+lB8YF2E/M/PYDaQe1AJcWaEgqLE+ErXV1Og/+6Vyzew==,
@@ -4315,7 +4315,7 @@ packages:
       eslint-plugin-react-hooks: ^4.3.0
     dependencies:
       eslint: 8.13.0
-      eslint-config-airbnb-base: 15.0.0_25dbcfb8cfecb7418ebda712664abe37
+      eslint-config-airbnb-base: 15.0.0_exn47ogp5s3uddv5u4jgmsv6g4
       eslint-plugin-import: 2.26.0_eslint@8.13.0
       eslint-plugin-jsx-a11y: 6.5.1_eslint@8.13.0
       eslint-plugin-react: 7.29.4_eslint@8.13.0
@@ -7023,7 +7023,7 @@ packages:
     engines: { node: '>=0.10.0' }
     dev: true
 
-  /react-router-dom/6.3.0_react-dom@18.0.0+react@18.0.0:
+  /react-router-dom/6.3.0_zpnidt7m3osuk7shl3s4oenomq:
     resolution:
       {
         integrity: sha512-uaJj7LKytRxZNQV8+RbzJWnJ8K2nPsOOEuX7aQstlMZKQT0164C+X2w6bnkqU3sjtLvpd5ojrezAyfZ1+0sStw==,
@@ -7948,7 +7948,7 @@ packages:
     engines: { node: '>=8' }
     dev: true
 
-  /ts-node/10.7.0_de7c86b0cde507c63a0402da5b982bd3:
+  /ts-node/10.7.0_3z6inmgn4ud4moqealnfxgbl2m:
     resolution:
       {
         integrity: sha512-TbIGS4xgJoX2i3do417KSaep1uRAW/Lu+WAL2doDHC0D6ummjirVOXU5/7aiZotbQ5p1Zp9tP7U6cYhA0O7M8A==,
