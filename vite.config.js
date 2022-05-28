@@ -36,6 +36,11 @@ export default ({ mode }) => {
     preview: {
       port: 8080,
     },
+    test: {
+      globals: true,
+      environment: 'jsdom',
+      setupFiles: 'src/setupTests.js',
+    },
     build: {
       outDir: 'build',
       reportCompressedSize: false,
