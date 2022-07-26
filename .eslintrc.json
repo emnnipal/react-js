@@ -22,6 +22,7 @@
   ],
   "rules": {
     "no-prototype-builtins": "off",
+    "class-methods-use-this": "off",
     "linebreak-style": "off",
     "import/prefer-default-export": "off",
     "import/order": [
