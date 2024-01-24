@@ -40,15 +40,15 @@ jobs:
       #   id: extract_branch
 
       - name: Checkout ${{ inputs.branch }} branch
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           ref: ${{ inputs.branch }}
 
-      - uses: pnpm/action-setup@v2.0.1
+      - uses: pnpm/action-setup@v2
         with:
           version: 7.0.1
 
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v4
         with:
           node-version: 16.13.0
           cache: 'pnpm'
